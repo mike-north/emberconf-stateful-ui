@@ -1,7 +1,13 @@
+    {{#each errors as |e|}}
+      <p class='red-text'>
+        {{e.detail}}
+      </p>
+    {{/each}}
+    {{if saving 'Saving'}}
+
     <div class="pr-comment-container">
       {{textarea value=model.body disabled=saving}}
     </div>
-    {{if saving 'Saving'}}
     <div class="actions text-right">
       <button class="action" onclick={{action 'cancel'}}
         disabled={{saving}}>
