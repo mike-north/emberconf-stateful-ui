@@ -13,10 +13,11 @@ export default Ember.Component.extend({
       this.set('model.body', '');
     },
     submit(){
-      const model = this.get('model');
-      const attributes = Ember.$.extend(model, {
+      const body = this.get('model.body');
+      const attributes = {
+        body,
         pull: this.get('pr')
-      });
+      };
       this.set('saving', true);
       this.get('store').createRecord('comment', attributes).save().then(() =>{
         this.set('saving', false);

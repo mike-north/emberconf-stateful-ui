@@ -1,8 +1,14 @@
     <div class="pr-comment-container">
-      {{textarea value=model.body}}
+      {{textarea value=model.body disabled=saving}}
     </div>
     {{if saving 'Saving'}}
     <div class="actions text-right">
-      <button class="action" onclick={{action 'cancel'}}>Cancel</button>
-      <button class="action" onclick={{action 'submit'}}>Submit</button>
+      <button class="action" onclick={{action 'cancel'}}
+        disabled={{saving}}>
+      Cancel
+      </button>
+      <button class="action" onclick={{action 'submit'}}
+        disabled={{saving}}>
+      Submit
+      </button>
     </div>
