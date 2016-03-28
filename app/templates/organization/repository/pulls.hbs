@@ -1,0 +1,9 @@
+<h4>Pulls</h4>
+<ul>
+{{#each model as |p|}}
+  <li>{{#link-to 'organization.repository.pull' p.id}}
+  [{{p.state}}] - {{p.title}}
+  {{/link-to}}
+  </li>
+{{/each}}
+</ul>

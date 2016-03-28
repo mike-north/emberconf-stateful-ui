@@ -1,0 +1,47 @@
+* {
+  font-family: Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 0px 20px;
+}
+
+.pr-title {
+  padding: 20px 20px;
+  background: #aaa;
+  color: #000;
+}
+
+.pr-body {
+  border: 1px solid #aaa;
+  background: #eee;
+  padding: 10px;
+  margin-bottom: 30px;
+  font-size: 1.3rem;
+}
+
+.pr-comment {
+  border: 1px solid #aaa;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.pr-comment .pr-comment-path {
+  font-weight: bold;
+  padding: 10px;
+  margin: -10px -10px 10px -10px;
+  background: #666;
+  color: #fff;
+  border-bottom: 1px solid #aaa;
+}
+.pr-comment .pr-comment-diff {
+  padding: 10px;
+  margin: -10px -10px 10px -10px;
+  background: #ddd;
+  border-bottom: 1px solid #aaa;
+}

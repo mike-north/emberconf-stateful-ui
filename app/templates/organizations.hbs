@@ -1,0 +1,7 @@
+<h1>Organizations</h1>
+
+<ul>
+{{#each model as |o|}}
+  <li>{{link-to o.name 'organization.repositories' o.id}}</li>
+{{/each}}
+</ul>
