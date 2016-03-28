@@ -62,3 +62,13 @@ body {
 pre, pre span {
   font-family: monospace;
 }
+
+.text-right {
+  float: right;
+}
+
+.compose-pr-comment .pr-comment-container textarea,
+.compose-pr-comment .pr-comment-container .preview {
+  min-height: 100px;
+  width: 100%;
+}
