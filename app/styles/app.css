@@ -52,7 +52,7 @@ body {
 }
 
 .filters a.ember-transitioning-in {
-  background-color: #ddd;
+  background-color: yellow;
 }
 
 .filters a.active {

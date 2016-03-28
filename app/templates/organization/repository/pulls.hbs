@@ -1,13 +1,15 @@
 <h4>Pulls</h4>
 <diff class="filters">
-  <a href='#'>Open</a>
-  <a href='#'>Closed</a>
-  <a href='#'>All</a>
+  {{link-to 'Open' 'organization.repository.pulls' (query-params state='open')}}
+  {{link-to 'Closed' 'organization.repository.pulls' (query-params state='closed')}}
+  {{link-to 'All' 'organization.repository.pulls' (query-params state='')}}
 </diff>
 <ul>
 {{#each model as |p|}}
   <li>
+  {{#link-to 'organization.repository.pull' p.id}}
   [{{p.state}}] - {{p.title}}
+  {{/link-to}}
   </li>
 {{/each}}
 </ul>
