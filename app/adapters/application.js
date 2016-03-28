@@ -2,8 +2,7 @@
 import DS from 'ember-data';
 
 export default DS.JSONAPIAdapter.extend({
-  // host: 'https://emberconf-state-api.herokuapp.com',
-  host: 'http://localhost:4000',
+  host: 'https://emberconf-state-api.herokuapp.com',
   namespace: 'api',
   coalesceFindRequests: true,
   ajaxOptions() {
