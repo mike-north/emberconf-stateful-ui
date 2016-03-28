@@ -1,4 +1,9 @@
 <h4>Pulls</h4>
+<diff class="filters">
+  {{link-to 'Open' 'organization.repository.pulls' (query-params state='open') reload=true}}
+  {{link-to 'Closed' 'organization.repository.pulls' (query-params state='closed') reload=true}}
+  {{link-to 'All' 'organization.repository.pulls' (query-params state='') reload=true}}
+</diff>
 <ul>
 {{#each model as |p|}}
   <li>{{#link-to 'organization.repository.pull' p.id}}
