@@ -67,8 +67,7 @@ pre, pre span {
   float: right;
 }
 
-.compose-pr-comment .pr-comment-container textarea,
-.compose-pr-comment .pr-comment-container .preview {
+.compose-pr-comment .pr-comment-container textarea {
   min-height: 100px;
   width: 100%;
 }
