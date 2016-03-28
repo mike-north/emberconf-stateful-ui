@@ -6,7 +6,7 @@ export default Ember.Route.extend({
       refreshModel: true
     }
   },
-  model(params, transition) {
+  model(params /*, transition*/) {
     let repo = this.modelFor('organization.repository');
     let queryOptions = {
       repository_id: repo.id,

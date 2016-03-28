@@ -1,3 +1,4 @@
+/*globals showdown:true*/
 import Ember from 'ember';
 
 export function markdown(params/*, hash*/) {
