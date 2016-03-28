@@ -45,3 +45,16 @@ body {
   background: #ddd;
   border-bottom: 1px solid #aaa;
 }
+
+
+.filters a {
+  padding: 3px;
+}
+
+.filters a.ember-transitioning-in {
+  background-color: #ddd;
+}
+
+.filters a.active {
+  background-color: #bbb;
+}
