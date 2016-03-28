@@ -1,38 +1,21 @@
-<h1 class='pr-title'>This is the title of my PR</h1>
+<h1 class='pr-title'>{{model.title}}</h1>
 <div class="container">
   <div class="pr-body">
-  {{{markdown body}}}
+  {{{markdown model.body}}}
   </div>
 
+  {{#each model.comments as |comment|}}
   <div class="pr-comment">
-    <div class="pr-comment-path">/app/models/abc.js</div>
+    <div class="pr-comment-path">{{comment.path}}</div>
     <div class="pr-comment-diff">
-      {{diff-text diff=diffText}}
+      {{diff-text diff=comment.diffHunk}}
     </div>
     <div class="pr-comment-body">
-      This is the body of my comment. It should also be rendered in markdown since that's what github supports
+      {{markdown comment.body}}
     </div>
   </div>
+  {{/each}}
 
-  <div class="pr-comment">
-    <div class="pr-comment-path">/app/models/abc.js</div>
-    <div class="pr-comment-diff">
-      {{diff-text diff=diffText}}
-    </div>
-    <div class="pr-comment-body">
-      This is the body of my comment. It should also be rendered in markdown since that's what github supports
-    </div>
-  </div>
-
-  <div class="pr-comment">
-    <div class="pr-comment-path">/app/models/abc.js</div>
-    <div class="pr-comment-diff">
-      {{diff-text diff=diffText}}
-    </div>
-    <div class="pr-comment-body">
-      This is the body of my comment. It should also be rendered in markdown since that's what github supports
-    </div>
-  </div>
 </div>
 
 {{yield}}

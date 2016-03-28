@@ -4,9 +4,8 @@ const { Model, attr, hasMany, belongsTo } = DS;
 
 export default Model.extend({
   repository: belongsTo('repository'),
+  comments: hasMany('comment'),
   title: attr('string'),
-  diffHunk: attr('string'),
-  path: attr('string'),
-  commitId: attr('string'),
+  body: attr('string'),
   state: attr('string')
 });

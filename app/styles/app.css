@@ -58,3 +58,7 @@ body {
 .filters a.active {
   background-color: #bbb;
 }
+
+pre, pre span {
+  font-family: monospace;
+}
