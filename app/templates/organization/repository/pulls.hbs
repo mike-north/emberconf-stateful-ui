@@ -2,7 +2,7 @@
 <diff class="filters">
   {{link-to 'Open' 'organization.repository.pulls' (query-params state='open')}}
   {{link-to 'Closed' 'organization.repository.pulls' (query-params state='closed')}}
-  {{link-to 'All' 'organization.repository.pulls' (query-params state='')}}
+  {{link-to 'All' 'organization.repository.pulls' (query-params state='all')}}
 </diff>
 <ul>
 {{#each model as |p|}}

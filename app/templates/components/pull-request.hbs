@@ -1,0 +1,22 @@
+<h1 class="pr-title">{{model.title}}</h1>
+<div class="container">
+  <div class="pr-body">
+
+    {{{markdown model.body}}}
+
+  </div>
+  {{#each model.comments as |comment|}}
+  <div class="pr-comment">
+    <div class="pr-comment-path">
+      {{comment.path}}
+    </div>
+    <div class="pr-comment-diff">
+      {{diff-text diff=comment.diffHunk}}
+    </div>
+    <div>
+      {{{markdown comment.body}}}
+    </div>
+  </div>
+  {{/each}}
+
+</div>

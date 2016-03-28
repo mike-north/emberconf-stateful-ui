@@ -11,7 +11,7 @@ export default Ember.Route.extend({
     let args = {
       repository_id: repo.get('id')
     };
-    if (params.state) {
+    if (params.state && !params.state === 'all') {
       args.state = params.state;
     }
     return this.store.query('pull', args);
