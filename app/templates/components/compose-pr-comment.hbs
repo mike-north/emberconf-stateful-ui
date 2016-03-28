@@ -1,7 +1,11 @@
+<div>
+  {{if loading "Loading...."}}
+  {{if error.length error}}
+</div>
 <div class="pr-comment-container">
-  {{textarea value=body}}
+  {{textarea value=body disabled=loading}}
 </div>
 <div>
-  <button onclick={{action 'save'}}>Save</button>
-  <button onclick={{action 'cancel'}}>Cancel</button>
+  <button disabled={{loading}} onclick={{action 'save'}}>Save</button>
+  <button disabled={{loading}} onclick={{action 'cancel'}}>Cancel</button>
 </div>
