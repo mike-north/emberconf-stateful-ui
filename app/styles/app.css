@@ -47,7 +47,7 @@ body {
 }
 
 
-.filters a {
+.filters a, .filters span {
   padding: 3px;
 }
 
