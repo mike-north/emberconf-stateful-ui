@@ -3,7 +3,7 @@
   {{if error.length error}}
 </div>
 <div class="pr-comment-container">
-  {{textarea value=body disabled=loading}}
+  {{textarea value=draft.body disabled=loading}}
 </div>
 <div>
   <button disabled={{loading}} onclick={{action 'save'}}>Save</button>

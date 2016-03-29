@@ -1,11 +1,12 @@
 import Ember from 'ember';
+import stateFor from 'ember-state-services/state-for';
 
 const { Component, inject } = Ember;
 
 export default Component.extend({
   classNames: ['compose-pr-comment'],
   store: inject.service(),
-  body: '',
+  draft: stateFor('comment-drafts', 'pr'),
   loading: false,
   error: '',
   actions: {
@@ -13,10 +14,10 @@ export default Component.extend({
       this.set('loading', true);
       this.get('store').createRecord('comment', {
         pull: this.get('pr'),
-        body: this.get('body')
+        body: this.get('draft.body')
       }).save().then(() => {
         if (!(this.isDestroyed || this.isDestroying)) {
-          this.set('body', '');
+          this.set('draft.body', '');
         }
       }).catch((errInfo) => {
         let errString = errInfo.errors
@@ -33,7 +34,7 @@ export default Component.extend({
     },
     cancel() {
       if (!(this.isDestroyed || this.isDestroying)) {
-        this.set('body', '');
+        this.set('draft.body', '');
         this.set('loading', false);
       }
     }
